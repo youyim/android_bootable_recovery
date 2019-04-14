@@ -398,6 +398,8 @@ endif
 ifneq ($(TW_CLOCK_OFFSET),)
 	LOCAL_CFLAGS += -DTW_CLOCK_OFFSET=$(TW_CLOCK_OFFSET)
 endif
+RECOVERY_BUILD_DATE := $(shell date +"%Y%m%d")
+LOCAL_CFLAGS += -DRECOVERY_BUILD_DATE="$(RECOVERY_BUILD_DATE)"
 LOCAL_REQUIRED_MODULES += \
     dump_image \
     erase_image \
