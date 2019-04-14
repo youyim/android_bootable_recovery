@@ -716,5 +716,8 @@
 		<string name="include_kernel_log">Include Kernel Log</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
+		<string name="author_youyim">by Youyim  %recovery_build_date%</string>
+		<string name="youyim_tools">Youyim Tools</string>
+		<string name="youyim_tools_hdr">Youyim Tools</string>
 	</resources>
 </language>

@@ -3521,6 +3521,12 @@
 			</button>
 
 			<button style="main_button">
+				<placement x="%center_x%" y="%row19_y%"/>
+				<text>{@youyim_tools=Youyim Tools}</text>
+				<action function="page">youyim</action>
+			</button>
+
+			<button style="main_button">
 				<placement x="%indent%" y="%row8_y%"/>
 				<text>{@terminal_btn=Terminal}</text>
 				<action function="page">terminalcommand</action>
@@ -4915,6 +4921,25 @@
 					<action function="page">action_page</action>
 				</actions>
 			</slider>
+
+			<action>
+				<touch key="home"/>
+				<action function="page">main</action>
+			</action>
+
+			<action>
+				<touch key="back"/>
+				<action function="page">advanced</action>
+			</action>
+		</page>
+
+		<page name="youyim">
+			<template name="page"/>
+
+			<text style="text_l">
+				<placement x="%col1_x_header%" y="%row3_header_y%"/>
+				<text>{@youyim_tools_hdr=Youyim Tools}</text>
+			</text>
 
 			<action>
 				<touch key="home"/>
