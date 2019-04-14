@@ -731,5 +731,9 @@
 		<string name="flash_stock_recovery_confirm">Flash Stock Recovery?</string>
 		<string name="flash_stock_recovery">Flashing Stock Recovery...</string>
 		<string name="flash_stock_recovery_complete">Flash Stock Recovery Complete</string>
+		<string name="dont_ignore_bootloader_btn">Don't Ignore Bootloader</string>
+		<string name="dont_ignore_bootloader_confirm">Don't Ignore Bootloader?</string>
+		<string name="dont_ignore_bootloader">Don't Ignore Bootloader...</string>
+		<string name="dont_ignore_bootloader_complete">Don't Ignore Bootloader Complete</string>
 	</resources>
 </language>

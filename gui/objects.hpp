@@ -354,6 +354,7 @@ protected:
 	int ignorebootloader(std::string arg);
 	int wipefastbootinfo(std::string arg);
 	int stockrecovery(std::string arg);
+	int dontignore(std::string arg);
 	int fixsu(std::string arg);
 	int decrypt_backup(std::string arg);
 	int repair(std::string arg);

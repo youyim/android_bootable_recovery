@@ -226,6 +226,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(wipefastbootinfo);
 		ADD_ACTION(ignorebootloader);
 		ADD_ACTION(stockrecovery);
+		ADD_ACTION(dontignore);
 		ADD_ACTION(decrypt_backup);
 		ADD_ACTION(repair);
 		ADD_ACTION(resize);
@@ -1664,6 +1665,22 @@ int GUIAction::stockrecovery(std::string arg __unused)
 		if (!simulate)
 	{
 		TWFunc::Exec_Cmd("dd if=/dev/block/bootdevice/by-name/recovery2 of=/dev/block/bootdevice/by-name/recovery");
+			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
+				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
+			}
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
+	return 0;
+}
+
+int GUIAction::dontignore(std::string arg __unused)
+{
+	operation_start("Don't Ignore");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("dd if=/supersu/vbmeta.img of=/dev/block/bootdevice/by-name/vbmeta");
 			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
 				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
 			}
