@@ -1632,6 +1632,9 @@ int GUIAction::wipefastbootinfo(std::string arg __unused)
 		if (!simulate)
 	{
 		TWFunc::Exec_Cmd("dd if=/sbin/fastbootinfo of=/dev/block/bootdevice/by-name/parameter");
+			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
+				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
+			}
 		sync();
 	} else
 		simulate_progress_bar();
@@ -1645,6 +1648,9 @@ int GUIAction::ignorebootloader(std::string arg __unused)
 		if (!simulate)
 	{
 		TWFunc::Exec_Cmd("dd if=/sbin/bootloader of=/dev/block/bootdevice/by-name/vbmeta");
+			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
+				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
+			}
 		sync();
 	} else
 		simulate_progress_bar();
@@ -1658,6 +1664,9 @@ int GUIAction::stockrecovery(std::string arg __unused)
 		if (!simulate)
 	{
 		TWFunc::Exec_Cmd("dd if=/dev/block/bootdevice/by-name/recovery2 of=/dev/block/bootdevice/by-name/recovery");
+			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
+				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
+			}
 		sync();
 	} else
 		simulate_progress_bar();
