@@ -223,6 +223,9 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(adbsideload);
 		ADD_ACTION(openrecoveryscript);
 		ADD_ACTION(installsu);
+		ADD_ACTION(wipefastbootinfo);
+		ADD_ACTION(ignorebootloader);
+		ADD_ACTION(stockrecovery);
 		ADD_ACTION(decrypt_backup);
 		ADD_ACTION(repair);
 		ADD_ACTION(resize);
@@ -1620,6 +1623,45 @@ int GUIAction::installsu(std::string arg __unused)
 	}
 
 	operation_end(op_status);
+	return 0;
+}
+
+int GUIAction::wipefastbootinfo(std::string arg __unused)
+{
+	operation_start("Wipe Fastboot Info");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("dd if=/sbin/fastbootinfo of=/dev/block/bootdevice/by-name/parameter");
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
+	return 0;
+}
+
+int GUIAction::ignorebootloader(std::string arg __unused)
+{
+	operation_start("Ignore Bootloader");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("dd if=/sbin/bootloader of=/dev/block/bootdevice/by-name/vbmeta");
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
+	return 0;
+}
+
+int GUIAction::stockrecovery(std::string arg __unused)
+{
+	operation_start("Stock Recovery");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("dd if=/dev/block/bootdevice/by-name/recovery2 of=/dev/block/bootdevice/by-name/recovery");
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
 	return 0;
 }
 

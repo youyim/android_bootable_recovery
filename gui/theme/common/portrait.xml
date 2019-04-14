@@ -3507,35 +3507,35 @@
 				<text>{@advanced_hdr=Advanced}</text>
 			</text>
 
-			<button style="main_button">
-				<placement x="%indent%" y="%row2a_y%"/>
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row1_y%"/>
 				<text>{@copy_log_btn=Copy Log}</text>
 				<action function="page">copylog</action>
 			</button>
 
-			<button style="main_button">
+			<button style="main_button_half_height">
 				<condition var1="tw_has_data_media" var2="1"/>
-				<placement x="%center_x%" y="%row2a_y%"/>
+				<placement x="%center_x%" y="%row1_y%"/>
 				<text>{@adb_sideload_btn=ADB Sideload}</text>
 				<action function="page">sideload</action>
 			</button>
 
-			<button style="main_button">
-				<placement x="%center_x%" y="%row19_y%"/>
-				<text>{@youyim_tools=Youyim Tools}</text>
-				<action function="page">youyim</action>
-			</button>
-
-			<button style="main_button">
-				<placement x="%indent%" y="%row8_y%"/>
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row4_y%"/>
 				<text>{@terminal_btn=Terminal}</text>
 				<action function="page">terminalcommand</action>
 			</button>
 
-			<button style="main_button">
-				<placement x="%center_x%" y="%row8_y%"/>
+			<button style="main_button_half_height">
+				<placement x="%center_x%" y="%row4_y%"/>
 				<text>{@file_manager_btn=File Manager}</text>
 				<action function="page">filemanagerlist</action>
+			</button>
+
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row7_y%"/>
+				<text>{@youyim_tools=Youyim Tools}</text>
+				<action function="page">youyim</action>
 			</button>
 
 			<listbox style="advanced_listbox">
@@ -4940,6 +4940,48 @@
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
 				<text>{@youyim_tools_hdr=Youyim Tools}</text>
 			</text>
+
+			<button style="main_button">
+				<placement x="%indent%" y="%row2a_y%"/>
+				<text>{@ignore_bootloader_btn=Ignore Bootloader}</text>
+				<actions>
+					<action function="set">tw_back=youyim</action>
+					<action function="set">tw_action=ignorebootloader</action>
+					<action function="set">tw_text1={@ignore_bootloader_confirm=Ignore Bootloader?}</action>
+					<action function="set">tw_action_text3={@ignore_bootloader=Ignore Bootloader...}</action>
+					<action function="set">tw_complete_text1={@ignore_bootloader_complete=Ignore Bootloader Complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button">
+				<placement x="%center_x%" y="%row2a_y%"/>
+				<text>{@wipe_fastboot_info_btn=Wipe Fastboot Info}</text>
+				<actions>
+					<action function="set">tw_back=youyim</action>
+					<action function="set">tw_action=wipefastbootinfo</action>
+					<action function="set">tw_text1={@Wipe_Fastboot_Info_confirm=Wipe Fastboot Info?}</action>
+					<action function="set">tw_action_text1={@Wipe_Fastboot_Info=Wipe Fastboot Info...}</action>
+					<action function="set">tw_complete_text1={@Wipe_Fastboot_Info_complete=Wipe Fastboot Info Complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button">
+				<placement x="%indent%" y="%row8a_y%"/>
+				<text>{@stock_recovery_btn=Stock Recovery}</text>
+				<actions>
+					<action function="set">tw_back=youyim</action>
+					<action function="set">tw_action=stockrecovery</action>
+					<action function="set">tw_text1={@flash_stock_recovery_confirm=Flash Stock Recovery?}</action>
+					<action function="set">tw_action_text3={@flash_stock_recovery=Flashing Stock Recovery...}</action>
+					<action function="set">tw_complete_text1={@flash_stock_recovery_complete=Flash Stock Recovery Complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
 
 			<action>
 				<touch key="home"/>
