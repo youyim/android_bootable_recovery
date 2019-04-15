@@ -1116,6 +1116,12 @@ void TWFunc::Disable_Stock_Recovery_Replace(void) {
 			rename("/system/recovery-from-boot.p", "/system/recovery-from-boot.bak");
 			gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
 			sync();
+		} else {
+			if (TWFunc::Path_Exists("/system/system/recovery-from-boot.p")) {
+			rename("/system/system/recovery-from-boot.p", "/system/system/recovery-from-boot.bak");
+			gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
+			sync();
+			} 
 		}
 		PartitionManager.UnMount_By_Path(PartitionManager.Get_Android_Root_Path(), false);
 	}
