@@ -702,9 +702,5 @@
 		<string name="flash_stock_recovery_confirm">刷回官方Recovery?</string>
 		<string name="flash_stock_recovery">正在恢复官方Recovery...</string>
 		<string name="flash_stock_recovery_complete">Recovery已替换回官方，重新进入即可</string>
-		<string name="dont_ignore_bootloader_btn">取消绕过Bootloader锁</string>
-		<string name="dont_ignore_bootloader_confirm">确定要取消绕过Bootloader锁?</string>
-		<string name="dont_ignore_bootloader">取消绕过Bootloader锁中...</string>
-		<string name="dont_ignore_bootloader_complete">成功取消绕过Bootloader锁</string>
 	</resources>
 </language>

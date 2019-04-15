@@ -4941,7 +4941,7 @@
 				<text>{@youyim_tools_hdr=Youyim Tools}</text>
 			</text>
 
-			<button style="main_button">
+			<button style="main_button_half_height">
 				<placement x="%indent%" y="%row2a_y%"/>
 				<text>{@ignore_bootloader_btn=Ignore Bootloader}</text>
 				<actions>
@@ -4955,22 +4955,8 @@
 				</actions>
 			</button>
 
-			<button style="main_button">
+			<button style="main_button_half_height">
 				<placement x="%center_x%" y="%row2a_y%"/>
-				<text>{@dont_ignore_bootloader_btn=Don't Ignore}</text>
-				<actions>
-					<action function="set">tw_back=youyim</action>
-					<action function="set">tw_action=dontignore</action>
-					<action function="set">tw_text1={@dont_ignore_bootloader_confirm=Don't Ignore Bootloader?}</action>
-					<action function="set">tw_action_text3={@dont_ignore_bootloader=Don't Ignore Bootloader...}</action>
-					<action function="set">tw_complete_text1={@dont_ignore_bootloader_complete=Don't Ignore Bootloader Complete}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">confirm_action</action>
-				</actions>
-			</button>
-
-			<button style="main_button">
-				<placement x="%indent%" y="%row8a_y%"/>
 				<text>{@wipe_fastboot_info_btn=Wipe Fastboot Info}</text>
 				<actions>
 					<action function="set">tw_back=youyim</action>
@@ -4983,8 +4969,8 @@
 				</actions>
 			</button>
 
-			<button style="main_button">
-				<placement x="%center_x%" y="%row8a_y%"/>
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row5a_y%"/>
 				<text>{@stock_recovery_btn=Stock Recovery}</text>
 				<actions>
 					<action function="set">tw_back=youyim</action>
