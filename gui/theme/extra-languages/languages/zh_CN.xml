@@ -702,5 +702,8 @@
 		<string name="flash_stock_recovery_confirm">刷回官方Recovery?</string>
 		<string name="flash_stock_recovery">正在恢复官方Recovery...</string>
 		<string name="flash_stock_recovery_complete">Recovery已替换回官方，重新进入即可</string>
+		<string name="weibo_name">微博名称：youyim2</string>
+		<string name="weibo_website">微博地址：https://weibo.com/youyim</string>
+		<string name="report_issues">有问题请到微博反馈</string>
 	</resources>
 </language>

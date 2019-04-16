@@ -1231,6 +1231,9 @@ void TWFunc::check_selinux_support() {
 		} else {
 			free(contexts);
 			gui_msg("full_selinux=Full SELinux support is present.");
+			gui_msg("weibo_name=name youyim2");
+			gui_msg("weibo_website=website:https://weibo.com/youyim");
+			gui_msg("report_issues=you can report issues on my weibo");
 		}
 	}
 }

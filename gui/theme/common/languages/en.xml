@@ -731,5 +731,8 @@
 		<string name="flash_stock_recovery_confirm">Flash Stock Recovery?</string>
 		<string name="flash_stock_recovery">Flashing Stock Recovery...</string>
 		<string name="flash_stock_recovery_complete">Flash Stock Recovery Complete</string>
+		<string name="weibo_name">name youyim2</string>
+		<string name="weibo_website">website:https://weibo.com/youyim</string>
+		<string name="report_issues">you can report issues on my weibo</string>
 	</resources>
 </language>
