@@ -4943,20 +4943,6 @@
 
 			<button style="main_button_half_height">
 				<placement x="%indent%" y="%row2a_y%"/>
-				<text>{@ignore_bootloader_btn=Ignore Bootloader}</text>
-				<actions>
-					<action function="set">tw_back=youyim</action>
-					<action function="set">tw_action=ignorebootloader</action>
-					<action function="set">tw_text1={@ignore_bootloader_confirm=Ignore Bootloader?}</action>
-					<action function="set">tw_action_text3={@ignore_bootloader=Ignore Bootloader...}</action>
-					<action function="set">tw_complete_text1={@ignore_bootloader_complete=Ignore Bootloader Complete}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">confirm_action</action>
-				</actions>
-			</button>
-
-			<button style="main_button_half_height">
-				<placement x="%center_x%" y="%row2a_y%"/>
 				<text>{@wipe_fastboot_info_btn=Wipe Fastboot Info}</text>
 				<actions>
 					<action function="set">tw_back=youyim</action>
@@ -4970,7 +4956,7 @@
 			</button>
 
 			<button style="main_button_half_height">
-				<placement x="%indent%" y="%row5a_y%"/>
+				<placement x="%center_x%" y="%row2a_y%"/>
 				<text>{@stock_recovery_btn=Stock Recovery}</text>
 				<actions>
 					<action function="set">tw_back=youyim</action>

@@ -719,10 +719,6 @@
 		<string name="author_youyim">by Youyim  %recovery_build_date%</string>
 		<string name="youyim_tools">Youyim Tools</string>
 		<string name="youyim_tools_hdr">Youyim Tools</string>
-		<string name="ignore_bootloader_btn">Ignore Bootloader</string>
-		<string name="ignore_bootloader_confirm">Ignore Bootloader?</string>
-		<string name="ignore_bootloader">Ignore Bootloader...</string>
-		<string name="ignore_bootloader_complete">Ignore Bootloader Complete</string>
 		<string name="wipe_fastboot_info_btn">Wipe Fastboot Info</string>
 		<string name="Wipe_Fastboot_Info_confirm">Wipe Fastboot Info?</string>
 		<string name="Wipe_Fastboot_Info">Wipe Fastboot Info...</string>
