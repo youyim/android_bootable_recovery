@@ -225,6 +225,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(installsu);
 		ADD_ACTION(wipefastbootinfo);
 		ADD_ACTION(stockrecovery);
+		ADD_ACTION(disableverification);
 		ADD_ACTION(decrypt_backup);
 		ADD_ACTION(repair);
 		ADD_ACTION(resize);
@@ -1647,6 +1648,20 @@ int GUIAction::stockrecovery(std::string arg __unused)
 		if (!simulate)
 	{
 		TWFunc::Exec_Cmd("dd if=/dev/block/bootdevice/by-name/recovery2 of=/dev/block/bootdevice/by-name/recovery");
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
+	return 0;
+}
+
+int GUIAction::disableverification(std::string arg __unused)
+{
+	operation_start("Disable Verification");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("avbctl --force disable-verification");
+		TWFunc::Exec_Cmd("avbctl --force disable-verity");
 		sync();
 	} else
 		simulate_progress_bar();

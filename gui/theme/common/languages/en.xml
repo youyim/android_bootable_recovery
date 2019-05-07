@@ -730,5 +730,9 @@
 		<string name="weibo_name">name youyim2</string>
 		<string name="weibo_website">website:https://weibo.com/youyim</string>
 		<string name="report_issues">you can report issues on my weibo</string>
+		<string name="disable_verification_btn">Disable Verification</string>
+		<string name="disable_verification_confirm">Disable Verification?</string>
+		<string name="disable_verification">Disable Verification...</string>
+		<string name="disable_verification_complete">Disable Verification Complete</string>
 	</resources>
 </language>

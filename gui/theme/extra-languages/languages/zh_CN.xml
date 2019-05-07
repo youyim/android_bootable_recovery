@@ -701,5 +701,9 @@
 		<string name="weibo_name">微博名称：youyim2</string>
 		<string name="weibo_website">微博地址：https://weibo.com/youyim</string>
 		<string name="report_issues">有问题请到微博反馈</string>
+		<string name="disable_verification_btn">关闭DM验证</string>
+		<string name="disable_verification_confirm">确定要关闭DM验证?</string>
+		<string name="disable_verification">关闭DM验证中...</string>
+		<string name="disable_verification_complete">关闭DM验证完成</string>
 	</resources>
 </language>

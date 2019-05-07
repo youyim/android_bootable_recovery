@@ -4942,6 +4942,7 @@
 			</text>
 
 			<button style="main_button_half_height">
+				<condition var1="tw_no_wipefastbootinfo" var2="0"/>
 				<placement x="%indent%" y="%row2a_y%"/>
 				<text>{@wipe_fastboot_info_btn=Wipe Fastboot Info}</text>
 				<actions>
@@ -4964,6 +4965,21 @@
 					<action function="set">tw_text1={@flash_stock_recovery_confirm=Flash Stock Recovery?}</action>
 					<action function="set">tw_action_text3={@flash_stock_recovery=Flashing Stock Recovery...}</action>
 					<action function="set">tw_complete_text1={@flash_stock_recovery_complete=Flash Stock Recovery Complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button_half_height">
+				<condition var1="tw_no_disableverification" var2="0"/>
+				<placement x="%indent%" y="%row5a_y%"/>
+				<text>{@disable_verification_btn=Disable Verification}</text>
+				<actions>
+					<action function="set">tw_back=youyim</action>
+					<action function="set">tw_action=disableverification</action>
+					<action function="set">tw_text1={disable_verification_confirm=Disable Verification?}</action>
+					<action function="set">tw_action_text3={@disable_verification=Disable Verification...}</action>
+					<action function="set">tw_complete_text1={@disable_verification_complete=Disable Verification Complete}</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
 					<action function="page">confirm_action</action>
 				</actions>
