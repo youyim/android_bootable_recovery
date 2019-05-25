@@ -796,6 +796,7 @@ void DataManager::SetDefaultValues()
 	mData.SetValue("tw_sleep_total", "5");
 	mData.SetValue("tw_sleep", "5");
 	mConst.SetValue(RECOVERY_BUILD_DATE_VAR, RECOVERY_BUILD_DATE);
+
 	// Brightness handling
 	string findbright;
 #ifdef TW_BRIGHTNESS_PATH
@@ -909,11 +910,13 @@ void DataManager::SetDefaultValues()
 #ifdef TW_OEM_BUILD
 	LOGINFO("TW_OEM_BUILD := true\n");
 	mConst.SetValue("tw_oem_build", "1");
+	mConst.SetValue("tw_app_installed_in_system", "0");
 #else
 	mConst.SetValue("tw_oem_build", "0");
 	mPersist.SetValue("tw_app_prompt", "0");
 	mPersist.SetValue("tw_app_install_system", "0");
 	mData.SetValue("tw_app_install_status", "0"); // 0 = no status, 1 = not installed, 2 = already installed
+	mData.SetValue("tw_app_installed_in_system", "0");
 #endif
 
 	mData.SetValue("tw_enable_adb_backup", "0");

@@ -1117,9 +1117,9 @@ void TWFunc::Disable_Stock_Recovery_Replace(void) {
 			gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
 			sync();
 		} else {
-			if (TWFunc::Path_Exists("/system/system/recovery-from-boot.p")) {
-			rename("/system/system/recovery-from-boot.p", "/system/system/recovery-from-boot.bak");
-			gui_msg("rename_stock=Renamed stock recovery file in /system to prevent the stock ROM from replacing TWRP.");
+			if (TWFunc::Path_Exists("/system_root/system/recovery-from-boot.p")) {
+			rename("/system_root/system/recovery-from-boot.p", "/system_root/system/recovery-from-boot.bak");
+			gui_msg("rename_stock=Renamed stock recovery file in system_root to prevent the stock ROM from replacing TWRP.edit by youyim for system-as-root devices");
 			sync();
 			} 
 		}
@@ -1236,5 +1236,24 @@ void TWFunc::check_selinux_support() {
 			gui_msg("report_issues=you can report issues on my weibo");
 		}
 	}
+}
+
+bool TWFunc::Is_TWRP_App_In_System() {
+	if (PartitionManager.Mount_By_Path(PartitionManager.Get_Android_Root_Path(), false)) {
+		string base_path = PartitionManager.Get_Android_Root_Path();
+		if (TWFunc::Path_Exists(PartitionManager.Get_Android_Root_Path() + "/system"))
+			base_path += "/system"; // For devices with system as a root file system (e.g. Pixel)
+		string install_path = base_path + "/priv-app";
+		if (!TWFunc::Path_Exists(install_path))
+			install_path = base_path + "/app";
+		install_path += "/twrpapp";
+		if (TWFunc::Path_Exists(install_path)) {
+			LOGINFO("App found at '%s'\n", install_path.c_str());
+			DataManager::SetValue("tw_app_installed_in_system", 1);
+			return true;
+		}
+	}
+	DataManager::SetValue("tw_app_installed_in_system", 0);
+	return false;
 }
 #endif // ndef BUILD_TWRPTAR_MAIN

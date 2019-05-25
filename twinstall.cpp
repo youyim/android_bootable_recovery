@@ -453,4 +453,3 @@ int TWinstall_zip(const char* path, int* wipe_cache) {
 #endif
 	return ret_val;
 }
-
