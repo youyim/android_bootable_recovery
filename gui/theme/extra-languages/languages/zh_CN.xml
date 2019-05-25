@@ -690,6 +690,10 @@
 		<string name="author_youyim">作者：youyim  %recovery_build_date%</string>
 		<string name="youyim_tools">youyim工具箱</string>
 		<string name="youyim_tools_hdr">youyim工具箱</string>
+		<string name="ignore_bootloader_btn">绕过Bootloader锁</string>
+		<string name="ignore_bootloader_confirm">确定要绕过Bootloader锁?</string>
+		<string name="ignore_bootloader">正在绕过Bootloader锁...</string>
+		<string name="ignore_bootloader_complete">成功绕过Bootloader锁</string>
 		<string name="wipe_fastboot_info_btn">清除fastboot信息</string>
 		<string name="Wipe_Fastboot_Info_confirm">确定要清除fastboot界面解锁次数等?</string>
 		<string name="Wipe_Fastboot_Info">正在清除fastboot界面解锁次数...</string>

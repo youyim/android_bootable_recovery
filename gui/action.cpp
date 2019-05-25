@@ -224,6 +224,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(openrecoveryscript);
 		ADD_ACTION(installsu);
 		ADD_ACTION(wipefastbootinfo);
+		ADD_ACTION(ignorebootloader);
 		ADD_ACTION(stockrecovery);
 		ADD_ACTION(disableverification);
 		ADD_ACTION(decrypt_backup);
@@ -1631,10 +1632,20 @@ int GUIAction::wipefastbootinfo(std::string arg __unused)
 	operation_start("Wipe Fastboot Info");
 		if (!simulate)
 	{
-		TWFunc::Exec_Cmd("dd if=/youyimtool/fastbootinfo of=/dev/block/bootdevice/by-name/parameter");
-			if (TWFunc::Path_Exists("/tmp/recovery.log")) {
-				TWFunc::Exec_Cmd("rm /tmp/recovery.log");
-			}
+		TWFunc::Exec_Cmd("dd if=/youyimtool/parameter.img of=/dev/block/bootdevice/by-name/parameter");
+		sync();
+	} else
+		simulate_progress_bar();
+	operation_end(0);
+	return 0;
+}
+
+int GUIAction::ignorebootloader(std::string arg __unused)
+{
+	operation_start("Ignore Bootloader");
+		if (!simulate)
+	{
+		TWFunc::Exec_Cmd("dd if=/youyimtool/vbmeta.img of=/dev/block/bootdevice/by-name/vbmeta");
 		sync();
 	} else
 		simulate_progress_bar();
