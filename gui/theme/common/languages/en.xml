@@ -741,5 +741,9 @@
 		<string name="disable_verification_confirm">Disable Verification?</string>
 		<string name="disable_verification">Disable Verification...</string>
 		<string name="disable_verification_complete">Disable Verification Complete</string>
+		<string name="nubia_ota_btn">Nubia OTA</string>
+		<string name="flash_systemdelta_confirm">ota?</string>
+		<string name="flash_systemdelta">ota...</string>
+		<string name="flash_systemdelta_complete">OTA Complete</string>
 	</resources>
 </language>

@@ -737,5 +737,9 @@
 		<string name="disable_verification_confirm">确定要关闭DM验证?</string>
 		<string name="disable_verification">关闭DM验证中...</string>
 		<string name="disable_verification_complete">关闭DM验证完成</string>
+		<string name="nubia_ota_btn">努比亚 OTA</string>
+		<string name="flash_systemdelta_confirm">确认对系统无任何修改?</string>
+		<string name="flash_systemdelta">OTA中...</string>
+		<string name="flash_systemdelta_complete">OTA 完成</string>
 	</resources>
 </language>

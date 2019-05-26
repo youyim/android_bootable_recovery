@@ -4954,7 +4954,6 @@
 			</text>
 
 			<button style="main_button_half_height">
-				<condition var1="tw_no_wipefastbootinfo" var2="0"/>
 				<placement x="%indent%" y="%row2a_y%"/>
 				<text>{@wipe_fastboot_info_btn=Wipe Fastboot Info}</text>
 				<actions>
@@ -4998,7 +4997,6 @@
 			</button>
 
 			<button style="main_button_half_height">
-				<condition var1="tw_no_ignorebootloader" var2="0"/>
 				<placement x="%center_x%" y="%row5a_y%"/>
 				<text>{@ignore_bootloader_btn=Ignore Bootloader}</text>
 				<actions>
@@ -5007,6 +5005,25 @@
 					<action function="set">tw_text1={@ignore_bootloader_confirm=Ignore Bootloader?}</action>
 					<action function="set">tw_action_text3={@ignore_bootloader=Ignore Bootloader...}</action>
 					<action function="set">tw_complete_text1={@ignore_bootloader_complete=Ignore Bootloader Complete}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button_half_height">
+				<placement x="%indent%" y="%row8a_y%"/>
+				<text>{@nubia_ota_btn=Nubia OTA}</text>
+				<actions>
+					<action function="set">tw_back=youyim</action>
+					<action function="cmd">sh youyimtool/ota.sh</action>
+					<action function="set">tw_filename=/tmp/system.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=flash_zip</action>
+					<action function="set">tw_text1={@flash_systemdelta_confirm=ota?}</action>
+					<action function="set">tw_action_text1={@flash_systemdelta=ota...}</action>
+					<action function="set">tw_complete_text1={@flash_systemdelta_complete=OTA Complete}</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
 					<action function="page">confirm_action</action>
 				</actions>
